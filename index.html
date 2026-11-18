@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>포트폴리오</title>
+<style>
+:root{
+  --cream:#fff8ec;
+  --darkgreen:#204030;
+  --text:#222222;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Malgun Gothic",sans-serif;
+  background-color:var(--cream);
+  color:var(--text);
+  line-height:1.6;
+  max-width:1100px;
+  margin:0 auto;
+  padding:2rem 1.2rem;
+}
+header{margin-bottom:3rem;}
+h1,h2,h3{color:var(--darkgreen);margin-bottom:0.8rem;}
+section{margin-bottom:3rem;}
+.project-card, .activity-item{
+  background:#ffffff80;
+  padding:1.2rem;
+  border-radius:12px;
+  margin-bottom:1rem;
+  border:1px solid #e8dfce;
+}
+nav{
+  display:flex;
+  gap:1.4rem;
+  flex-wrap:wrap;
+  margin-bottom:2rem;
+}
+nav a{
+  color:var(--darkgreen);
+  text-decoration:none;
+  font-weight:500;
+}
+.btn{
+  display:inline-block;
+  background-color:var(--darkgreen);
+  color:white;
+  padding:0.5rem 1rem;
+  border-radius:6px;
+  text-decoration:none;
+  font-size:0.9rem;
+  margin-top:0.5rem;
+}
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.4);
+  padding:2rem;
+  overflow:auto;
+}
+.modal-content{
+  background:var(--cream);
+  max-width:700px;
+  margin:0 auto;
+  padding:2rem;
+  border-radius:12px;
+}
+.modal.show{display:block;}
+.close{
+  float:right;
+  font-size:1.5rem;
+  cursor:pointer;
+}
+.skills-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.7rem;
+  margin-top:0.6rem;
+}
+.skill-tag{
+  background:#e2e9e4;
+  color:var(--darkgreen);
+  padding:0.3rem 0.8rem;
+  border-radius:20px;
+  font-size:0.9rem;
+}
+footer{
+  margin-top:4rem;
+  padding-top:1.5rem;
+  border-top:1px solid #ddcfb8;
+}
+@media(max-width:600px){
+  nav{gap:0.8rem;}
+  .project-card{padding:1rem;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href=" ">About</a >
+  <a href="#projects">Projects</a >
+  <a href="#skills">Skills</a >
+  <a href="#journey">Journey</a >
+  <a href="#contact">Contact</a >
+</nav>
+
+<header id="about">
+  <h1>장신월</h1>
+  <p>가톨릭대학교 경영학과 학생입니다. 경영 데이터 분석, 마케팅 분야에 관심이 있습니다. 데이터를 활용한 문제 해결에 흥미를 느끼고 팀 협업 경험을 쌓고 있습니다.</p >
+</header>
+
+<section id="projects">
+  <h2>프로젝트</h2>
+  <div class="project-card">
+    <h3>프로젝트 1: 시장 트렌드 분석 및 마케팅 전략 수립</h3>
+    <p>시장 데이터를 수집·분석하여 소비자 동향을 파악하고, 신규 마케팅 방안을 기획했습니다.</p >
+    <a class="btn open-modal" data-target="modal1">프로젝트 상세 보기</a >
+  </div>
+  <div class="project-card">
+    <h3>프로젝트 2: 기업 경영 성과 분석</h3>
+    <p>재무·운영 데이터를 기반으로 기업의 경영 현황을 진단하고, 개선 아이디어를 제안했습니다.</p >
+    <a class="btn open-modal" data-target="modal2">프로젝트 상세 보기</a >
+  </div>
+</section>
+
+<section id="skills">
+  <h2>역량 / 기술</h2>
+  <div class="skills-list">
+    <span class="skill-tag">Python</span>
+    <span class="skill-tag">SQL</span>
+    <span class="skill-tag">데이터 시각화</span>
+    <span class="skill-tag">Excel 고급 분석</span>
+    <span class="skill-tag">HTML/CSS</span>
+  </div>
+</section>
+
+<section id="journey">
+  <h2>활동 기록</h2>
+  <div class="activity-item">
+    <h3>2025.09 ~ 2026.06 학생 활동</h3>
+    <p>다양한 학교 소모임에 참여하며 팀원들과 의견을 교환하고, 공동 과제를 함께 수행했습니다. 일정 조율과 협업을 통해 목표를 완수하는 경험을 쌓았습니다.</p >
+  </div>
+  <div class="activity-item">
+    <h3>2026.03 ~ 현재 경영학 수업 팀 프로젝트</h3>
+    <p>다양한 경영 사례를 분석하고, 팀원들과 토론을 통해 문제점을 도출하고 해결 방안을 정리했습니다.</p >
+  </div>
+</section>
+
+<footer id="contact">
+  <h2>연락처</h2>
+  <p>이메일 : zhangxinyue039@gmail.com</p >
+  <p>※ 포트폴리오 연락용 이메일입니다.</p >
+</footer>
+
+<div class="modal" id="modal1">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>시장 트렌드 분석 및 마케팅 전략 수립</h3>
+    <p>시장 데이터를 수집·분석하여 소비자 동향을 파악하고, 신규 마케팅 방안을 기획했습니다.</p >
+  </div>
+</div>
+<div class="modal" id="modal2">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>기업 경영 성과 분석</h3>
+    <p>재무·운영 데이터를 기반으로 기업의 경영 현황을 진단하고, 개선 아이디어를 제안했습니다.</p >
+  </div>
+</div>
+
+<script>
+const openBtns = document.querySelectorAll('.open-modal');
+const closeBtns = document.querySelectorAll('.close');
+const modals = document.querySelectorAll('.modal');
+
+openBtns.forEach(btn=>{
+  btn.addEventListener('click',e=>{
+    e.preventDefault();
+    const targetId = btn.getAttribute('data-target');
+    document.getElementById(targetId).classList.add('show');
+  })
+})
+closeBtns.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    modals.forEach(m=>m.classList.remove('show'));
+  })
+})
+window.addEventListener('click',e=>{
+  modals.forEach(m=>{
+    if(e.target===m) m.classList.remove('show');
+  })
+})
+</script>
+</body>
+</html>
